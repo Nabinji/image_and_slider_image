@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+void main() => runApp(
+      MyApp(),
+    );
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+width imagecaraousel = new container
+height: 200.0,
+child:carousel( 
+    BoxFit:BoxFit.cover,
+    image:[ 
+        AssetImage("images/a.png"),
+         AssetImage("images/b.png"),
+          AssetImage("images/c.png"),
+           AssetImage("images/d.png"),
+            AssetImage("images/e.png"),
+    ],
+    autoplay:false,
+)
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Image in Flutter"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+         imagecaraousel
+        ],
+      ),
+    );
+  }
+}
